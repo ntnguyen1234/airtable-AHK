@@ -1,6 +1,7 @@
 #NoEnv
 #SingleInstance force
 #Include JSON.ahk
+SendMode Input
 
 ; Gui
 <#2::
@@ -80,7 +81,7 @@
     WinHttp.SetRequestHeader("Content-Type", "application/json")
     WinHttp.SetRequestHeader("Authorization", "Bearer " obj.key)
     WinHttp.Send(Data)
-    ; MsgBox, % WinHttp.ResponseText
+    MsgBox, % WinHttp.ResponseText
     Return
   }
   Cancel:
