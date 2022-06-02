@@ -53,7 +53,7 @@
   Gui, Add, Edit, r10 vContent w480, % clipboard
 
   Gui, Add, Edit, y+20 vNoteField, % obj.note
-  Gui, Add, Edit, x+10 w400 r1 vNote
+  Gui, Add, Edit, x+10 w390 r1 vNote
 
   Gui, Add, Button, Default w80 gOK, OK
   Gui, Add, Button, x+5 w80 gCancel, Cancel
