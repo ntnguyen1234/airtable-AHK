@@ -17,8 +17,9 @@
 
   Gui, Destroy
   
-  Gui, Add, Text, x12, Project
-  Gui, Add, Text, x+100, Table
+  Gui, Font, s14 q5, Comic Sans MS
+  Gui, Add, Text, x10, Project
+  Gui, Add, Text, x+160, Table
 
   ProjectDropList := ""
   For Project, BaseAPI in obj.projects
@@ -49,10 +50,10 @@
   Gui, Add, DropDownList, x+10 vTable, %TableDropList%
 
   Gui, Add, Edit, x10 y+20 vContentField, % obj.content
-  Gui, Add, Edit, r4 vContent w360, % clipboard
+  Gui, Add, Edit, r10 vContent w480, % clipboard
 
   Gui, Add, Edit, y+20 vNoteField, % obj.note
-  Gui, Add, Edit, x+10 w300 r1 vNote
+  Gui, Add, Edit, x+10 w400 r1 vNote
 
   Gui, Add, Button, Default w80 gOK, OK
   Gui, Add, Button, x+5 w80 gCancel, Cancel
