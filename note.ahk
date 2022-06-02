@@ -10,7 +10,7 @@
   StringReplace clipboard, clipboard, %A_Space% `r`n, %A_Space%, All
   StringReplace clipboard, clipboard, `r`n, %A_Space%, All
 
-  ParamsFile := A_Desktop . "/parameters.json"
+  ParamsFile := A_Desktop . "/autohotkey/parameters.json"
   FileRead, params, %ParamsFile%
   obj := JSON.load(params)
 
