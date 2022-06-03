@@ -10,6 +10,8 @@ SendMode Input
   ClipWait  ; Wait for the clipboard to contain text.
   StringReplace clipboard, clipboard, %A_Space% `r`n, %A_Space%, All
   StringReplace clipboard, clipboard, `r`n, %A_Space%, All
+  StringReplace clipboard, clipboard, \, /, All
+  StringReplace clipboard, clipboard, `", ', All
   clipboard := Trim(clipboard, " `t")
 
   ParamsFile := A_Desktop . "/autohotkey/parameters.json"
@@ -18,7 +20,7 @@ SendMode Input
 
   Gui, Destroy
   
-  Gui, Font, s14 q5, Comic Sans MS
+  Gui, Font, s14 q5, Calibri
   Gui, Add, Text, x10, Project
   Gui, Add, Text, x+160, Table
 
@@ -72,7 +74,6 @@ SendMode Input
         API_Base := BaseAPI
       }
     }
-    StringReplace Content, Content, \, /, All
     Data = {"fields":{"%ContentField%": "%Content%", "%NoteField%": "%Note%"}}
 
     Sleep 1000
