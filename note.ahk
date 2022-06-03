@@ -82,7 +82,7 @@ SendMode Input
     WinHttp.SetRequestHeader("Content-Type", "application/json")
     WinHttp.SetRequestHeader("Authorization", "Bearer " obj.key)
     WinHttp.Send(Data)
-    MsgBox, % WinHttp.ResponseText
+    ; MsgBox, % WinHttp.ResponseText
     Return
   }
   Cancel:
