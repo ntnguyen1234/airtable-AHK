@@ -4,7 +4,7 @@
 SendMode Input
 
 ; Gui
-<#2::
+<#q::
   clipboard := ""
   Send ^c
   ClipWait  ; Wait for the clipboard to contain text.
